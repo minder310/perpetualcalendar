@@ -8,8 +8,20 @@
 </head>
 <body>
 <?php
-$height=$_GET['height'];
-$weight=$_GET['weight'];
+if(!empty($_GET)){
+    $height=$_GET['height'];
+    $weight=$_GET['weight'];
+
+}else if(!empty($_POST)){
+
+    $height=$_POST['height'];
+    $weight=$_POST['weight'];
+}else{
+
+    echo "資料輸入錯誤，請回表單重新輸入";
+    echo "<a href='bmi.php'>回表單</a>";
+    exit();
+}
 
 echo "身高為".$height."<br>";
 echo "體重為".$weight."<br>";
