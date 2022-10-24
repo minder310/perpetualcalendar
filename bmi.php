@@ -9,5 +9,10 @@
 <body>
     <a href='index.php'>回首頁</a>
     <h1>BMI計算</h1>
+    <form action="result.php" method="get">
+        <div>身高:<input type="number" name="height" id=""></div>        
+        <div>體重:<input type="number" name="weight" id=""></div>        
+        <div><input type="submit" value="計算BMI" id=""></div>        
+    </form>
 </body>
 </html>
