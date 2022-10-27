@@ -25,9 +25,23 @@ $cal=[];
 
 $month=(isset($_GET['m']))?$_GET['m']:date("n");
 $year=(isset($_GET['y']))?$_GET['y']:date("Y");
+echo "<hr>";
+echo $_GET['y'];
+echo "<hr>";
 
 $nextMonth=$month+1;
+if($month>12){
+    $nextMonth=2;
+    $month=1;
+    $year=$year+1;
+}
 $prevMonth=$month-1;
+if($month<1){
+    $prevMonth=11;
+    $month=12;
+    $year=$year-1;
+}
+
 
 
 $firstDay=$year."-".$month."-1";
@@ -58,9 +72,9 @@ echo "月曆天數共".($monthDays+$spaceDays)."天，".$weeks."周";
 ?>
 
 <div style="display:flex;width:80%;justify-content:space-between;align-items:center">
-    <a href="?y=2022&m=<?=$prevMonth;?>">上一個月</a>
+    <a href="?y=<?=$year?>&m=<?=$prevMonth;?>">上一個月</a>
     <h1><?=$year;?> 年 <?=$month;?> 月份</h1>
-    <a href="?y=2022&m=<?=$nextMonth;?>">下一個月</a>
+    <a href="?y=<?=$year?>&m=<?=$nextMonth;?>">下一個月</a>
 </div>
 
 <table>
@@ -77,6 +91,9 @@ foreach($cal as $i => $day){
 }
 
 ?>
+<form action="./calendar.php" method="$_GET">
+    <input type="text" name="y" value="<?=$year?>">
+</form>
 
 </table>
 </body>
