@@ -1,0 +1,46 @@
+body{
+    width: 1080px;
+    height: 720px;
+}
+.monther{
+    width: 1080px;
+    height: 720px;
+    display: flex;
+    align-items: center;
+}
+.monther1{
+    background-image: url(./perpetual_calendar/1.富士山.png);
+}
+.monther2{
+    background-image: url(./perpetual_calendar/2.富士山.png);
+}
+.monther3{
+    background-image: url(./perpetual_calendar/3.富士山.png);
+}
+.monther4{
+    background-image: url(./perpetual_calendar/4.富士山.png);
+}
+.monther5{
+    background-image: url(./perpetual_calendar/5.富士山.png);
+}
+.monther6{
+    background-image: url(./perpetual_calendar/6.富士山.png);
+}
+.monther7{
+    background-image: url(./perpetual_calendar/7.富士山.png);
+}
+.monther8{
+    background-image: url(./perpetual_calendar/8.富士山.png);
+}
+.monther9{
+    background-image: url(./perpetual_calendar/9.富士山.png);
+}
+.monther10{
+    background-image: url(./perpetual_calendar/10.富士山.png);
+}
+.monther11{
+    background-image: url(./perpetual_calendar/11.富士山.png);
+}
+.monther12{
+    background-image: url(./perpetual_calendar/12.富士山.png);
+}
