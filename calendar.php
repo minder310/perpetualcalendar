@@ -26,17 +26,39 @@
             margin: 0 auto;
         }
 
-        table td {
+        td {
             /* border: 1px solid #ccc; */
             padding: 3px 9px;
             height: 100px;
+            width: 120px;
         }
-        img{
+
+        /* 這邊是前面片的宣告。 */
+        img {
             width: 250px;
             /* 圖片漸漸出現效果。 */
-            
+            /* 一開圖片透明度。 */
+            opacity: 0.8;
+            /* 設定名稱，讓電腦知道要改變。 */
+            animation-name: example;
+            /* 設定變換時間。 */
+            animation-duration: 3s;
         }
+
+        /* 宣告變換模式。 */
+        @keyframes example {
+            /* 宣告變換型態。 */
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 0.8;
+            };
+        }
+
         /* 這邊是class */
+        /* 背景圖class宣告。 */
         .see1 {
             /* border: 2px double #000; */
             width: 50px;
@@ -58,6 +80,32 @@
             display: flex;
             align-items: center;
         }
+
+        .tooltiptext {
+            /* 宣告物件為隱藏。 */
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+
+            /* Position the tooltip */
+            /* 宣告絕對位置。 */
+            position: absolute;
+            /* 宣告z軸位置。 */
+            z-index: 1;
+        }
+
+        /* 測試字體會不會跳出來。 OK*/
+        .see1:hover .tooltiptext {
+            visibility: visible;
+        }
+        .see2:hover .tooltiptext{
+            visibility: visible;
+        }
+        
 
         /* 變大變小。 */
         .see1:hover {
@@ -120,7 +168,8 @@ for ($i = 0; $i < $spaceDays; $i++) {
 }
 
 for ($i = 0; $i < $monthDays; $i++) {
-    $cal[] = date("Y-m-d", strtotime("+$i days", strtotime($firstDay)));
+    $cal[] = date("d", strtotime("+$i days", strtotime($firstDay)));
+    // 這邊要加入判斷今天的公式。
 }
 
 /* echo "<pre>";
@@ -149,15 +198,19 @@ echo "</pre>"; */
         <div style="display:flex;">
             <a style="margin:0px;" href="?y=<?= $prevYear ?>&m=<?= $month; ?>">
                 <div class="see1">
-                    <p><年</p>
+                    <p class="tooltiptext">
+                        上一年 
+                    </p>
                 </div>
             </a>
             <a style="margin: 0px;" href="?y=<?= $year ?>&m=<?= $prevMonth; ?>">
                 <div class="see1">
-                    <p><月</p>
+                    <p class="tooltiptext">
+                        上個月
+                    </p>
                 </div>
             </a>
-            <img src="./perpetual_calendar/<?=$month?>-<?=$month?>.png" alt="">
+            <img src="./perpetual_calendar/<?= $month ?>-<?= $month ?>.png" alt="">
             <table style="background-color:rgba(255,255,255,0.6);margin:0px;">
                 <?php
                 foreach ($cal as $i => $day) {
@@ -175,12 +228,12 @@ echo "</pre>"; */
             </table>
             <a style="margin:0px;" href="?y=<?= $year ?>&m=<?= $nextMonth; ?>">
                 <div class="see2">
-                    <p>月></p>
+                    <p class="tooltiptext">下月個</p>
                 </div>
             </a>
             <a style="margin:0px;" href="?y=<?= $nextYear ?>&m=<?= $month; ?>">
                 <div class="see2">
-                    <p>年></p>
+                    <p class="tooltiptext">下一年</p>
                 </div>
             </a>
         </div>
