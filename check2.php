@@ -36,10 +36,13 @@ foreach($users as $user){
 if($chk){
     // 取用cookie內的time並且+1
     $time=$_COOKIE['time']+1;
-    // 宣告cookie內的time陣列，內的time=$time，並且時間+1年。
+    // 宣告cookie內的time陣列，內的time=$time，並且時間+.年。
     setcookie('time',$time,time()+(60*60*24*365));
 }else{
     $error="帳號密碼錯誤";
+    // 測試回傳值，並且可不可以拿來用。
+    $_COOKIE['test']=0;
+    setcookie('test','0',time()+(60*60*24));
 }
 // 要是$error有值。
 if(isset($error)){

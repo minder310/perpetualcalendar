@@ -13,6 +13,7 @@
     <li><a href="login.php">會員登入</a></li>
     <li><a href="calendar.php">萬年曆</a></li>
     <li><a href="login2.php">會員登錄2</a></li>
+    <li><a href="session.php">測試session功能</a></li>
 </ul>
 </body>
 </html>

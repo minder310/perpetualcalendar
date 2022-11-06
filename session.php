@@ -16,8 +16,8 @@
     echo $_SESSION['name'];
     ?>
     <!-- 連結到其他網站。 -->
-    <a href="session_01">會員中心</a>
-    <a href="session_02">個人資料</a>
+    <a href="session_1.php">會員中心</a>
+    <a href="session_2.php">個人資料</a>
     <?php
     print_r($_SESSION);
     
@@ -29,7 +29,9 @@
     echo "<pre>";
     print_r($_SESSION);
     echo "</pre>";
+    // 這邊為自動橙橙的COOKIE用來給指定資料作使用。
+    print_r($_COOKIE['PHPSESSID']);
     ?>
-
+    <!-- 在本業會產出一個自動的cookie叫做phpsessid它是用來回傳資料給伺服器用來看雨紀錄數值用的。 -->
 </body>
 </html>
