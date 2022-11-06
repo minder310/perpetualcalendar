@@ -36,7 +36,7 @@ foreach($users as $user){
 if($chk){
     // 取用cookie內的time並且+1
     $time=$_COOKIE['time']+1;
-    // 宣告cookie內的time陣列，內的time=$time，並且時間家1年。
+    // 宣告cookie內的time陣列，內的time=$time，並且時間+1年。
     setcookie('time',$time,time()+(60*60*24*365));
 }else{
     $error="帳號密碼錯誤";
