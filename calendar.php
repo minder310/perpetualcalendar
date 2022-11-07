@@ -47,6 +47,7 @@
 
         /* 宣告變換模式。 */
         @keyframes example {
+
             /* 宣告變換型態。 */
             from {
                 opacity: 0;
@@ -54,7 +55,9 @@
 
             to {
                 opacity: 0.8;
-            };
+            }
+
+            ;
         }
 
         /* 這邊是class */
@@ -62,7 +65,7 @@
         .see1 {
             /* border: 2px double #000; */
             width: 50px;
-            height: 600px;
+            height: 700px;
             margin: 0px;
             border-radius: 20px 0PX 0PX 20PX;
             background-color: rgba(255, 255, 255, 0.2);
@@ -73,7 +76,7 @@
         .see2 {
             /* border: 2px double #000; */
             width: 50px;
-            height: 600px;
+            height: 700px;
             margin: 0px;
             border-radius: 0px 20PX 20PX 0PX;
             background-color: rgba(255, 255, 255, 0.2);
@@ -102,10 +105,11 @@
         .see1:hover .tooltiptext {
             visibility: visible;
         }
-        .see2:hover .tooltiptext{
+
+        .see2:hover .tooltiptext {
             visibility: visible;
         }
-        
+
 
         /* 變大變小。 */
         .see1:hover {
@@ -126,6 +130,22 @@
             transition-duration: 0.3s;
             /* 更改透明度 */
             background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* 宣告今天的日期變色用的不透明度+0.1 */
+        .today {
+            background-color: rgba(255, 255, 255, 0.7)
+        }
+
+        /* 宣告六日為紅色透明。 */
+        .offday {
+            background-color: rgba(255, 50, 0, 0.1);
+        }
+
+        .daytexttop {
+            text-align: left;
+            /* 文字靠上對齊。 */
+            vertical-align: text-top;
         }
     </style>
 </head>
@@ -199,7 +219,7 @@ echo "</pre>"; */
             <a style="margin:0px;" href="?y=<?= $prevYear ?>&m=<?= $month; ?>">
                 <div class="see1">
                     <p class="tooltiptext">
-                        上一年 
+                        上一年
                     </p>
                 </div>
             </a>
@@ -212,13 +232,31 @@ echo "</pre>"; */
             </a>
             <img src="./perpetual_calendar/<?= $month ?>-<?= $month ?>.png" alt="">
             <table style="background-color:rgba(255,255,255,0.6);margin:0px;">
+                <tr>
+                    <td style="font-size:25px;">一</td>
+                    <td style="font-size:25px;">二</td>
+                    <td style="font-size:25px;">三</td>
+                    <td style="font-size:25px;">四</td>
+                    <td style="font-size:25px;">五</td>
+                    <td style="font-size:25px;" class="offday">六</td>
+                    <td style="font-size:25px;" class="offday">日</td>
+                </tr>
                 <?php
                 foreach ($cal as $i => $day) {
                     if ($i % 7 == 0) {
-                        echo "<tr>";
+                        echo "<tr class=daytexttop>";
                     }
-                    echo "<td>$day</td>";
-
+                    // 宣告如果日期是今天，td的class不一樣。
+                    if ("$year-$month-$day" == date("Y-m-d")) {
+                        echo "<td class='today daytexttop'>$day</td>";
+                    }
+                    //  else if($i%7==5 || $i%7==6)
+                    // {
+                    // echo "<td class=offday>$day</td>";    
+                    // }
+                    else {
+                        echo "<td class=daytexttop>$day</td>";
+                    }
                     if ($i % 7 == 6) {
                         echo "</tr>";
                     }
