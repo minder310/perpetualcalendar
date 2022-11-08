@@ -12,7 +12,7 @@
         /* 宣告運用字體類型，掛載字體。 */
         @font-face {
             font-family: 'mushin';
-            src: url(../perpetualcalendar/font-f/mushin.otf);
+            src: url(./font-f/mushin.otf);
         }
 
         * {
