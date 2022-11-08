@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>萬年曆</title>
     <link rel="stylesheet" href="style.css">
-
+    
     <style>
+        /* 宣告運用字體類型，掛載字體。 */
+        @font-face {
+            font-family: 'mushin';
+            src: url(../perpetualcalendar/font-f/mushin.otf);
+        }
         * {
             margin: 0px;
             padding: 0px;
@@ -18,7 +23,7 @@
             background-repeat: no-repeat;
             /* background-position: center; */
             box-sizing: border-box;
-            font-family: "標楷體";
+            font-family: "mushin";
         }
 
         table {
