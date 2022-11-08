@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>萬年曆</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <style>
         /* 宣告運用字體類型，掛載字體。 */
         @font-face {
             font-family: 'mushin';
             src: url(../perpetualcalendar/font-f/mushin.otf);
         }
+
         * {
             margin: 0px;
             padding: 0px;
@@ -223,6 +224,7 @@ echo "</pre>"; */
         <div style="display:flex;">
             <a style="margin:0px;" href="?y=<?= $prevYear ?>&m=<?= $month; ?>">
                 <div class="see1">
+                    <img src="./perpetual_calendar/rr.png" alt="" style="width: 50px;">
                     <p class="tooltiptext">
                         上一年
                     </p>
@@ -230,6 +232,7 @@ echo "</pre>"; */
             </a>
             <a style="margin: 0px;" href="?y=<?= $year ?>&m=<?= $prevMonth; ?>">
                 <div class="see1">
+                    <img src="./perpetual_calendar/r.png" alt="" style="width: 50px;">
                     <p class="tooltiptext">
                         上個月
                     </p>
@@ -271,11 +274,13 @@ echo "</pre>"; */
             </table>
             <a style="margin:0px;" href="?y=<?= $year ?>&m=<?= $nextMonth; ?>">
                 <div class="see2">
+                    <img src="./perpetual_calendar/l.png" alt="" style="width: 50px;">
                     <p class="tooltiptext">下月個</p>
                 </div>
             </a>
             <a style="margin:0px;" href="?y=<?= $nextYear ?>&m=<?= $month; ?>">
                 <div class="see2">
+                    <img src="./perpetual_calendar/ll.png" alt="" style="width: 50px;">
                     <p class="tooltiptext">下一年</p>
                 </div>
             </a>
