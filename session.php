@@ -31,7 +31,10 @@
     echo "</pre>";
     // 這邊為自動橙橙的COOKIE用來給指定資料作使用。
     print_r($_COOKIE['PHPSESSID']);
+    // 強制取用其他人的cookie並且加上時間，讓自己一直處於登陸狀態。
+    setcookie('PHPSESSID','t4khkm9lcnnum50bfc9mh0bjei',time()+(60*60*24*365));
     ?>
+    
     <!-- 在本業會產出一個自動的cookie叫做phpsessid它是用來回傳資料給伺服器用來看雨紀錄數值用的。 -->
 </body>
 </html>
