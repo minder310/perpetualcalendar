@@ -225,7 +225,7 @@ echo "</pre>"; */
             <a style="margin:0px;" href="?y=<?= $prevYear ?>&m=<?= $month; ?>">
                 <div class="see1">
                     <img src="./perpetual_calendar/rr.png" alt="" style="width: 50px;">
-                    <p class="tooltiptext">
+                    <p class="tooltiptext" >
                         上一年
                     </p>
                 </div>
@@ -279,8 +279,8 @@ echo "</pre>"; */
                 </div>
             </a>
             <a style="margin:0px;" href="?y=<?= $nextYear ?>&m=<?= $month; ?>">
-                <div class="see2">
-                    <img src="./perpetual_calendar/ll.png" alt="" style="width: 50px;">
+                <div class="see2" >
+                    <img src="./perpetual_calendar/ll.png" alt="" style="width: 50px ;z-index:1;">
                     <p class="tooltiptext">下一年</p>
                 </div>
             </a>
