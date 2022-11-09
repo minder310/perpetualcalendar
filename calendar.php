@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>萬年曆</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="style.css">
 
     <style>
         /* 宣告運用字體類型，掛載字體。 */
@@ -22,7 +22,7 @@
             justify-content: center;
             margin: 0 auto;
             background-repeat: no-repeat;
-            /* background-position: center; */
+            /* background-position: center;  */
             box-sizing: border-box;
             font-family: "mushin";
         }
@@ -77,8 +77,8 @@
             background-color: rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
-           
-            
+
+
         }
 
         .see2 {
@@ -90,7 +90,7 @@
             background-color: rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
-          
+
         }
 
         .tooltiptext {
@@ -113,12 +113,12 @@
         /* 測試字體會不會跳出來。 OK*/
         .see1:hover .tooltiptext {
             visibility: visible;
-            
+
         }
 
         .see2:hover .tooltiptext {
             visibility: visible;
-            
+
         }
 
 
@@ -158,20 +158,8 @@
             /* 文字靠上對齊。 */
             vertical-align: text-top;
         }
-        /* 測試功能區。 */
-        .test{
-            position: fixed;
-            border: 3px solid #777;
-            width: 50px;
-            height: 50px;
-            left: -45px;
-            top: 150px;
-            /* 宣告變動時間。 */
-            transition: 1s;
-        }
-        .test:hover{
-            left: 0px;
-        }
+
+        
     </style>
 </head>
 <?php
@@ -232,7 +220,7 @@ echo "</pre>"; */
 
 
 <body>
-    <div class="test"></div>
+    <div class=" test ">12345</div>
     <div style="display:flex;width:80%;justify-content:space-between;align-items:center">
         <h1><?= $year; ?> 年 <?= $month; ?> 月份</h1>
     </div>
@@ -245,7 +233,7 @@ echo "</pre>"; */
             <a style="margin:0px;" href="?y=<?= $prevYear ?>&m=<?= $month; ?>">
                 <div class="see1">
                     <img src="./perpetual_calendar/rr.png" alt="" style="width: 50px;">
-                    <p class="tooltiptext" >
+                    <p class="tooltiptext">
                         上一年
                     </p>
                 </div>
@@ -299,7 +287,7 @@ echo "</pre>"; */
                 </div>
             </a>
             <a style="margin:0px;" href="?y=<?= $nextYear ?>&m=<?= $month; ?>">
-                <div class="see2" >
+                <div class="see2">
                     <img src="./perpetual_calendar/ll.png" alt="" style="width: 50px ;z-index:1;">
                     <p class="tooltiptext">下一年</p>
                 </div>

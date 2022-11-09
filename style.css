@@ -1,82 +1,115 @@
-body{
+body {
     width: 1080px;
     height: 720px;
 }
-.monther{
+
+.monther {
     width: 1080px;
     height: 720px;
     display: flex;
     align-items: center;
 
 }
-.monther1{
+
+.monther1 {
     background-image: url(./perpetual_calendar/1.富士山.png);
     /* 宣告變數名稱。 */
     animation-name: backimg;
     /* 宣告變換時間。 */
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther2{
+
+.monther2 {
     background-image: url(./perpetual_calendar/2.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther3{
+
+.monther3 {
     background-image: url(./perpetual_calendar/3.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther4{
+
+.monther4 {
     background-image: url(./perpetual_calendar/4.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther5{
+
+.monther5 {
     background-image: url(./perpetual_calendar/5.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther6{
+
+.monther6 {
     background-image: url(./perpetual_calendar/6.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther7{
+
+.monther7 {
     background-image: url(./perpetual_calendar/7.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther8{
+
+.monther8 {
     background-image: url(./perpetual_calendar/8.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther9{
+
+.monther9 {
     background-image: url(./perpetual_calendar/9.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther10{
+
+.monther10 {
     background-image: url(./perpetual_calendar/10.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther11{
+
+.monther11 {
     background-image: url(./perpetual_calendar/11.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
-.monther12{
+
+.monther12 {
     background-image: url(./perpetual_calendar/12.富士山.png);
     animation-name: backimg;
-    animation-duration:2s;
+    animation-duration: 2s;
 }
+
 /* 變換的名稱 */
-@keyframes backimg{
-    from{
+@keyframes backimg {
+    from {
         /* opacity 透明度宣告。由多少變多少。 */
         opacity: 0;
-    }to{
+    }
+
+    to {
         opacity: 1;
-    };
+    }
+
+    ;
+}
+/* 測試功能區。 */
+.test {
+    position: fixed;
+    border: 3px solid #777;
+    width: 50px;
+    height: 50px;
+    left: -45px;
+    top: 150px;
+    /* 宣告變動時間。  */
+    transition: 1s;
+}
+
+.test:hover {
+    left: 0px;
 }
