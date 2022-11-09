@@ -220,14 +220,30 @@ echo "</pre>"; */
 
 
 <body>
-    <div class=" test ">12345</div>
+    <div class="test">
+        <form action="">
+            <h2>想搜尋哪年</h2>
+            <label style="font-size: 24px;" for="y">年</label><br>
+            <input type="num" class="intext" name="y" min="1980" max="2999"><br>
+            <label style="font-size: 24px;" for="m">月</label><br>
+            <input type="num" class="intext" name="m" min="1" max="12"><br><br>
+            <input style="font-size: 20px;" type="submit" value="搜尋" class="intext">
+        </form>
+        <br>
+        <form action="">
+            <!-- inpute type:hidden為隱藏數值，畫面上不會顯示，可以偷傳數值回去。 -->
+            <input type="hidden" name="y" value=<?=date("Y")?>>
+            <input type="hidden" name="m" value=<?=date("m")?>>
+            <input class="intext" type="submit" value="回到今天" style="font-size:20px;">
+        </form>
+    </div>
     <div style="display:flex;width:80%;justify-content:space-between;align-items:center">
         <h1><?= $year; ?> 年 <?= $month; ?> 月份</h1>
     </div>
     <!-- <form action="./calendar.php" method="$_GET">
         <input type="text" name="y" value="<?= $year ?>">
     </form> -->
-    <div class="monther<?= $month ?> monther" style="border-radius: 20px;">
+    <div class="monther<?= rand(1,12) ?> monther" style="border-radius: 20px;">
 
         <div style="display:flex;">
             <a style="margin:0px;" href="?y=<?= $prevYear ?>&m=<?= $month; ?>">
