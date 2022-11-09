@@ -224,9 +224,10 @@ echo "</pre>"; */
         <form action="">
             <h2>想搜尋哪年</h2>
             <label style="font-size: 24px;" for="y">年</label><br>
-            <input type="num" class="intext" name="y" min="1980" max="2999"><br>
-            <label style="font-size: 24px;" for="m">月</label><br>
-            <input type="num" class="intext" name="m" min="1" max="12"><br><br>
+            <!-- min max 為限制最大數值與最小數值 required 一定要輸入 autocomplete="off"不帶入之前輸入的值。-->
+            <input type="number" class="intext" name="y" min="1980" max="2999" required autocomplete="off"><br>
+            <label style="font-size: 24px;" for="m" >月</label><br>
+            <input type="number" class="intext" name="m" min="1" max="12" step="1" required autocomplete="off"><br><br>
             <input style="font-size: 20px;" type="submit" value="搜尋" class="intext">
         </form>
         <br>
