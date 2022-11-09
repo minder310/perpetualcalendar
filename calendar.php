@@ -77,6 +77,8 @@
             background-color: rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
+           
+            
         }
 
         .see2 {
@@ -88,6 +90,7 @@
             background-color: rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
+          
         }
 
         .tooltiptext {
@@ -110,10 +113,12 @@
         /* 測試字體會不會跳出來。 OK*/
         .see1:hover .tooltiptext {
             visibility: visible;
+            
         }
 
         .see2:hover .tooltiptext {
             visibility: visible;
+            
         }
 
 
@@ -152,6 +157,20 @@
             text-align: left;
             /* 文字靠上對齊。 */
             vertical-align: text-top;
+        }
+        /* 測試功能區。 */
+        .test{
+            position: fixed;
+            border: 3px solid #777;
+            width: 50px;
+            height: 50px;
+            left: -45px;
+            top: 150px;
+            /* 宣告變動時間。 */
+            transition: 1s;
+        }
+        .test:hover{
+            left: 0px;
         }
     </style>
 </head>
@@ -213,6 +232,7 @@ echo "</pre>"; */
 
 
 <body>
+    <div class="test"></div>
     <div style="display:flex;width:80%;justify-content:space-between;align-items:center">
         <h1><?= $year; ?> 年 <?= $month; ?> 月份</h1>
     </div>
