@@ -222,12 +222,12 @@ echo "</pre>"; */
 <body>
     <div class="test">
         <form action="">
-            <h2>想搜尋哪年</h2>
-            <label style="font-size: 24px;" for="y">年</label><br>
+            <h2 class="intext">想搜尋哪</h2>
+            <label style="font-size: 24px;" for="y" class="intext">年</label>
             <!-- min max 為限制最大數值與最小數值 required 一定要輸入 autocomplete="off"不帶入之前輸入的值。-->
-            <input type="number" class="intext" name="y" min="1980" max="2999" required autocomplete="off"><br>
-            <label style="font-size: 24px;" for="m" >月</label><br>
-            <input type="number" class="intext" name="m" min="1" max="12" step="1" required autocomplete="off"><br><br>
+            <input type="number" class="intext" name="y" min="1980" max="2999" required autocomplete="off">
+            <label style="font-size: 24px;" for="m" class="intext">月</label>
+            <input type="number" class="intext" name="m" min="1" max="12" step="1" required autocomplete="off"><br>
             <input style="font-size: 20px;" type="submit" value="搜尋" class="intext">
         </form>
         <br>
@@ -281,7 +281,12 @@ echo "</pre>"; */
                     }
                     // 宣告如果日期是今天，td的class不一樣。
                     if ("$year-$month-$day" == date("Y-m-d")) {
-                        echo "<td class='today daytexttop'>$day</td>";
+                        echo "<td class='today daytexttop'>$day
+                        <textarea type='text'; style='width: 100%;
+                        border: none;
+                        height: 80%;
+                        background-color: rgb(255,255,255,0.1);'>
+                        </textarea>";
                     }
                     //  else if($i%7==5 || $i%7==6)
                     // {

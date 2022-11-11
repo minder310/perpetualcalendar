@@ -108,17 +108,19 @@ body {
     left: -45px;
     top: 150px;
     /* 宣告變動時間。  */
-    transition: 1s;
+    transition: 0.5s;
     border-radius: 50px;
 }
 
 .intext{
     width: 0;
-    transition: 1s;
+    transition: 3s;
+    display: none;
 }
 .test:hover .intext{
 
     width: 100px;
+    display: block;
 }
 .test:hover{
     left: 0px;
